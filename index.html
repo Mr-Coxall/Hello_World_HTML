@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html>
+
+<script>
+  function myFunction() {
+    // comment
+    var x = document.getElementById("myText").value;
+    var integerX = parseInt(x, 10);
+    
+    if (Number.isSafeInteger(integerX) == true) {
+      document.getElementById("demo").innerHTML = integerX;
+    } else { 
+      integerX = integerX + 1
+      document.getElementById("demo").innerHTML = x;
+    }
+  }
+</script>
 <body>
 
 First Name: <input type="text" id="myText" value="Mickey">
@@ -10,21 +25,7 @@ First Name: <input type="text" id="myText" value="Mickey">
 
 <p id="demo"></p>
 
-<script>
-function myFunction() {
-// comment
-  var x = document.getElementById("myText").value;
-  var integerX = parseInt(x, 10);
-  
-  if (Number.isSafeInteger(integerX) == true) {
-  	document.getElementById("demo").innerHTML = integerX;
-  } else { 
-  	integerX = integerX + 1
-  	document.getElementById("demo").innerHTML = x;
-  }
 
-}
-</script>
 
 </body>
 </html>
