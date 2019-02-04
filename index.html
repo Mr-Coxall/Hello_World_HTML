@@ -8,9 +8,9 @@
     var integerX = parseInt(x, 10);
     
     if (Number.isSafeInteger(integerX) == true) {
+      integerX = integerX + 1
       document.getElementById("demo").innerHTML = integerX;
     } else { 
-      integerX = integerX + 1
       document.getElementById("demo").innerHTML = x;
     }
   }
