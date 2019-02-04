@@ -1,9 +1,31 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello Home Page</title>
-  </head>
-  <body>
-    <p style="font-family:Arial;color:blue">Hello, World!</p>
-  </body>
+<body>
+
+First Name: <input type="text" id="myText" value="Mickey">
+
+<p>Click the button to display the value of the value attribute of the text field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+// comment
+  var x = document.getElementById("myText").value;
+  var integerX = parseInt(x, 10);
+  
+  if (Number.isSafeInteger(integerX) == true) {
+  	document.getElementById("demo").innerHTML = integerX;
+  } else { 
+  	integerX = integerX + 1
+  	document.getElementById("demo").innerHTML = x;
+  }
+
+}
+</script>
+
+</body>
 </html>
